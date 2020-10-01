@@ -1,3 +1,3 @@
 # projetoIntegrador-frontEnd
-Projeto Integrador trabalhado no curso da Generation Brasil
+Projeto Integrador  no curso da Generation Brasil
 
