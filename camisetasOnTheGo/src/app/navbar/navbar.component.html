@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <a class="navbar-brand d-flex p-0" href="#">
-        <img src="../../assets/img/camisetasOnTheGo1.png" alt="exemplo de logo"
-            height="43px">
+        <img src="../../assets/img/camisetasOnTheGo1.png" alt="exemplo de logo" height="43px">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,23 +10,40 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#h1">Início</a>
+                <a class="nav-link" routerLink='/home'>Início</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#h2">Loja</a>
+                <a class="nav-link">Loja</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#h5">Sobre nós</a>
+                <a class="nav-link">Sobre nós</a>
             </li>
             <li>
-                <a href="#h6" class="nav-link">Contato</a>
+                <a routerLink='/contato' class="nav-link">Contato</a>
             </li>
+            <div *ngIf='authService.btnLogin()'>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+            </div>
+            <div *ngIf='authService.btnLogin()'>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/cadastro">Cadastro</a>
+                </li>
+            </div>
+            <div *ngIf='authService.btnSair()'>
+                <li class="nav-item">
+                    <a (click)='sair()' class="nav-link">Sair</a>
+                </li>
+            </div>
+
+
         </ul>
     </div>
 </nav>
 
 
-    <!--nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+<!--nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
         <div class="container-fluid d-flex">
             <div class="row">
                 <div class="col-sm-6">
