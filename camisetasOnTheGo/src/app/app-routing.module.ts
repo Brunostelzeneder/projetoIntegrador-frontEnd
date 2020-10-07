@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ContatoComponent } from './contato/contato.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { ProdutosComponent } from './produtos/produtos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -14,7 +17,10 @@ const routes: Routes = [
   {path: 'navbar', component: NavbarComponent},
   {path: 'contato', component: ContatoComponent},
   {path: 'cadastro', component: CadastroComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'produtos', component: ProdutosComponent},
+  {path: 'admin', component: AdminComponent},
+  {path: 'post-categoria', component: PostCategoriaComponent}
 ];
 
 @NgModule({
