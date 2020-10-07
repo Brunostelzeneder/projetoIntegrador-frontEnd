@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SobrenosComponent } from './sobrenos/sobrenos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ContatoComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    SobrenosComponent
   ],
   imports: [
     BrowserModule,
