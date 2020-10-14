@@ -19,9 +19,6 @@ export class UpdateProdutoComponent implements OnInit {
   categoria: Categoria = new Categoria();
   listaCategoria: Categoria[];
 
-  name: string;
-  animal: string;
-
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
@@ -39,16 +36,13 @@ export class UpdateProdutoComponent implements OnInit {
     });
   }
 
-  openDialog(): void {
+  openDialog(produto: Produto): void {
     const dialogRef = this.dialog.open(DialogComponent, {
-      width: '250px',
-      data: {name: this.name, animal: this.animal}
+      width: '650px',
+      data: {nome: produto.nome, link: produto.linkImagem, preco: produto.preco}
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
-    });
+    dialogRef.afterClosed().subscribe(result => {});
   }
 
 }

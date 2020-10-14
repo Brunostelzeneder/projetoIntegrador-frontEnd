@@ -1,9 +1,12 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Categoria } from '../model/Categoria';
+import { Produto } from '../model/Produto';
 
 export interface DialogData {
-  animal: string;
-  name: string;
+  nome: string; 
+  link: string; 
+  preco: number;
 }
 
 @Component({
@@ -12,6 +15,12 @@ export interface DialogData {
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
+
+  produto: Produto = new Produto();
+  listaProduto: Produto[];
+
+  categoria: Categoria = new Categoria();
+  listaCategoria: Categoria[];
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
