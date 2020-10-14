@@ -1,0 +1,65 @@
+<div class="container py-5 my-5 texto">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h4 class="text-center">Lista de produtos</h4>
+        </div>
+    </div>
+
+    <table class="table mt-2 table-hover font-weight-regular">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col" class="d-flex justify-content-end">Modificações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let produto of listaProduto'>
+                <th scope="row">{{produto.id}}</th>
+                <td>{{produto.nome}}</td>
+                <th>
+                    {{produto.quantidade}}
+                </th>
+                <td class="d-flex justify-content-end">
+                    <a type="button" class="btn btn-outline-info mr-3" (click)="openDialog()">Editar</a>
+                    <a class="btn btn-outline-danger">Apagar</a>
+                </td>
+                <div class="modal fade" id="modal#{{produto.id}}" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="{{produto.id}}">{{produto.nome}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Novo nome:</label>
+                                        <input type="text" class="form-control" id="recipient-name#{{produto.id}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Link imagem:</label>
+                                        <input type="text" class="form-control" id="link-image#{{produto.id}}">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Atualizar</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                    aria-label="Close">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </tr>
+
+        </tbody>
+
+
+
+    </table>
+</div>

@@ -12,14 +12,19 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
 import { ProdutosComponent } from './produtos/produtos.component';
 import { AdminComponent } from './admin/admin.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { NgModule } from '@angular/core';
-=======
-import { SobrenosComponent } from './sobrenos/sobrenos.component';
->>>>>>> b6791d0cf46763ac03791e44b4b2aab840cd23e9
+import { UpdateProdutoComponent } from './update-produto/update-produto.component';
+import { UpdateCategoriaComponent } from './update-categoria/update-categoria.component';
+
+import { DialogComponent } from './dialog/dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -30,13 +35,12 @@ import { SobrenosComponent } from './sobrenos/sobrenos.component';
     ContatoComponent,
     LoginComponent,
     CadastroComponent,
-<<<<<<< HEAD
     ProdutosComponent,
     AdminComponent,
-    PostCategoriaComponent
-=======
-    SobrenosComponent
->>>>>>> b6791d0cf46763ac03791e44b4b2aab840cd23e9
+    PostCategoriaComponent,
+    UpdateProdutoComponent,
+    UpdateCategoriaComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,12 @@ import { SobrenosComponent } from './sobrenos/sobrenos.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

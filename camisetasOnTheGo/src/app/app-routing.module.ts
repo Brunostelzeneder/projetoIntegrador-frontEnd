@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { UpdateCategoriaComponent } from './update-categoria/update-categoria.component';
+import { UpdateProdutoComponent } from './update-produto/update-produto.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -20,7 +22,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'produtos', component: ProdutosComponent},
   {path: 'admin', component: AdminComponent},
-  {path: 'post-categoria', component: PostCategoriaComponent}
+  {path: 'post-categoria', component: PostCategoriaComponent},
+  {path: 'update-categoria', component: UpdateCategoriaComponent},
+  {path: 'update-produto', component: UpdateProdutoComponent}
 ];
 
 @NgModule({
