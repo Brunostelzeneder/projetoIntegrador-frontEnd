@@ -42,7 +42,9 @@ export class UpdateProdutoComponent implements OnInit {
       data: {nome: produto.nome, link: produto.linkImagem, preco: produto.preco}
     });
 
-    dialogRef.afterClosed().subscribe(result => {});
+    dialogRef.afterClosed().subscribe((resp: Produto) => {
+      this.produto = resp; 
+    });
   }
 
 }
