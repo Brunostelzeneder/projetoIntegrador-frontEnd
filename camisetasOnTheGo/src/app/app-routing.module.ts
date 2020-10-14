@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'admin', component: AdminComponent},
   {path: 'post-categoria', component: PostCategoriaComponent},
   {path: 'update-categoria', component: UpdateCategoriaComponent},
-  {path: 'update-produto', component: UpdateProdutoComponent}
+  {path: 'update-produto', component: UpdateProdutoComponent},
   {path: 'sobrenos', component: SobrenosComponent}
 ];
 

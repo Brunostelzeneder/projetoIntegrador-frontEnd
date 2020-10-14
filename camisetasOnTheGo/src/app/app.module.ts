@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { AdminComponent } from './admin/admin.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
@@ -27,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +38,13 @@ import {MatTableModule} from '@angular/material/table';
     ContatoComponent,
     LoginComponent,
     CadastroComponent,
+    MenuLateralComponent,
     ProdutosComponent,
     AdminComponent,
     PostCategoriaComponent,
     UpdateProdutoComponent,
     UpdateCategoriaComponent,
-    DialogComponent
-    PostCategoriaComponent
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
