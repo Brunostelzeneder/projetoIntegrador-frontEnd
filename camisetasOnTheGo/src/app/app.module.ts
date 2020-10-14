@@ -42,6 +42,7 @@ import {MatTableModule} from '@angular/material/table';
     UpdateProdutoComponent,
     UpdateCategoriaComponent,
     DialogComponent
+    PostCategoriaComponent
   ],
   imports: [
     BrowserModule,

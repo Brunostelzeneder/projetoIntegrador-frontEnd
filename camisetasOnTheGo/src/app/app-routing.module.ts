@@ -11,6 +11,7 @@ import { PostCategoriaComponent } from './post-categoria/post-categoria.componen
 import { ProdutosComponent } from './produtos/produtos.component';
 import { UpdateCategoriaComponent } from './update-categoria/update-categoria.component';
 import { UpdateProdutoComponent } from './update-produto/update-produto.component';
+import { SobrenosComponent } from './sobrenos/sobrenos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'post-categoria', component: PostCategoriaComponent},
   {path: 'update-categoria', component: UpdateCategoriaComponent},
   {path: 'update-produto', component: UpdateProdutoComponent}
+  {path: 'sobrenos', component: SobrenosComponent}
 ];
 
 @NgModule({
