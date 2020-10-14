@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { UpdateCategoriaComponent } from './update-categoria/update-categoria.component';
+import { UpdateProdutoComponent } from './update-produto/update-produto.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 
 const routes: Routes = [
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path: 'produtos', component: ProdutosComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'post-categoria', component: PostCategoriaComponent},
+  {path: 'update-categoria', component: UpdateCategoriaComponent},
+  {path: 'update-produto', component: UpdateProdutoComponent}
   {path: 'sobrenos', component: SobrenosComponent}
 ];
 

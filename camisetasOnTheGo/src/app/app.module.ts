@@ -16,6 +16,16 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { AdminComponent } from './admin/admin.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { NgModule } from '@angular/core';
+import { UpdateProdutoComponent } from './update-produto/update-produto.component';
+import { UpdateCategoriaComponent } from './update-categoria/update-categoria.component';
+
+import { DialogComponent } from './dialog/dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -28,6 +38,10 @@ import { NgModule } from '@angular/core';
     CadastroComponent,
     ProdutosComponent,
     AdminComponent,
+    PostCategoriaComponent,
+    UpdateProdutoComponent,
+    UpdateCategoriaComponent,
+    DialogComponent
     PostCategoriaComponent
   ],
   imports: [
@@ -36,7 +50,13 @@ import { NgModule } from '@angular/core';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
