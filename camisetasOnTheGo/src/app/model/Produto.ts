@@ -2,7 +2,8 @@ import { Categoria } from './Categoria'
 
 export class Produto {
     id: number;
-    cor: string;
+    nome: string;
+    linkImagem: string;
     instituicao: string;
     preco: number;
     quantidade: number;

@@ -13,10 +13,10 @@
                 <a class="nav-link" routerLink='/home'>Início</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">Loja</a>
+                <a class="nav-link" routerLink='/produtos'>Loja</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">Sobre nós</a>
+                <a routerLink='/sobrenos' class="nav-link">Sobre nós</a>
             </li>
             <li>
                 <a routerLink='/contato' class="nav-link">Contato</a>
@@ -29,6 +29,11 @@
             <div *ngIf='authService.btnLogin()'>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/cadastro">Cadastro</a>
+                </li>
+            </div>
+            <div *ngIf='authService.btnSair()'>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/admin">Admin</a>
                 </li>
             </div>
             <div *ngIf='authService.btnSair()'>

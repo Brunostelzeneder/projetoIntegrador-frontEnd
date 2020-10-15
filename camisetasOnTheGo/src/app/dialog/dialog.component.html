@@ -1,0 +1,35 @@
+<h1 mat-dialog-title class="texto">{{data.nome}}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <mat-dialog-content>
+        <p class="texto">Atualização de produto</p>
+        <mat-form-field>
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="data.nome">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Link</mat-label>
+          <input matInput [(ngModel)]="data.link">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Preço</mat-label>
+          <input matInput class="text-right" [(ngModel)]="data.preco">
+          <span matPrefix>$&nbsp;</span>
+        </mat-form-field>
+      </mat-dialog-content>
+    </div>
+    <div class="col-md-8">
+      <img src="{{data.link}}" class="img-fluid" alt="Responsive image">
+    </div>
+  </div>
+</div>
+
+<mat-dialog-actions align="end">
+  <button mat-button color="warn" (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="salvar()">Salvar</button>
+</mat-dialog-actions>
+
+
