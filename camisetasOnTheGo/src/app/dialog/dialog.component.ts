@@ -1,14 +1,15 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FormGroup } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
-import { UpdateProdutoComponent } from '../update-produto/update-produto.component';
+
 
 export interface DialogData {
-  nome: string; 
-  link: string; 
-  preco: number;
+  id: number;
 }
 
 @Component({
@@ -24,20 +25,40 @@ export class DialogComponent implements OnInit {
   categoria: Categoria = new Categoria();
   listaCategoria: Categoria[];
 
+  produtoForm: FormGroup;
+
   constructor(
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    private produtoService: ProdutoService,
+    private categoriaService: CategoriaService,
     public dialogRef: MatDialogRef<DialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-    ) {}
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+
+    this.findByIdProduto(this.data.id);
+    this.findAllCategoria();
   }
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  findByIdProduto(id: number) {
+    this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
+      this.produto = resp;
+    });
   }
 
-  
+  findAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp;
+    });
+  }
+
   salvar() {
+    this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
+      this.produto = resp;
+    });
+    this.dialogRef.close();
+    this.router.navigate(['/admin']);    
   }
 
 }

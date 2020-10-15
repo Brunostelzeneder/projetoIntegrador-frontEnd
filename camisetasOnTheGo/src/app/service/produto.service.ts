@@ -26,7 +26,7 @@ export class ProdutoService {
   }
 
   putProduto(produto: Produto) {
-    return this.http.put('http://localhost:8080/Produto', produto, this.token);
+    return this.http.put('http://localhost:8080/produto', produto, this.token);
   }
 
   deleteByIdProduto(id: number) {

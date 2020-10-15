@@ -1,30 +1,42 @@
 <div class="container py-5 my-5">
+    <small> <a routerLink='/home'>Home</a> / Produtos</small>
     <div class="row">
-        <div class="col-md-4" *ngFor="let item of listaProduto">
+        <!--div class="col-md-4" *ngFor="let item of listaProduto">
             <div class="pb-5">
                 <div class="card zoom" style="width: 18rem;">
                     <img src="{{item.linkImagem}}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{item.instituicao}}</h5>
-                        <p class="card-text">Categoria: {{item.categoria.descricao}}</p>
+                        <h5 class="card-title">{{item.nome}}</h5>
+                        <p class="card-text">Instituição: {{item.instituicao}}</p>
                         <a href="#" class="btn btn-success">Comprar</a>
                     </div>
                 </div>
             </div>
             
+        </div-->
+        <div class="col-md-4 texto" *ngFor="let item of listaProduto">
+            <mat-card class="example-card my-3 mx-2 zoom">
+                <a class="imagem" href="#">
+                    <img mat-card-image class="" src="{{item.linkImagem}}" alt="Photo of a Shiba Inu">
+                    <p id="comprar"><b>COMPRAR</b></p>
+                </a>
+                <mat-card-title class="text-center mb-1 mt-2">{{item.nome}}</mat-card-title>
+                <mat-card-content class="mb-1" align="end">
+                  
+                    
+                        <small>R$ </small>   <em> {{item.preco}}</em> 
+                    
+                  
+                </mat-card-content>
+                
+                <mat-card-actions class="pt-0" align="end">
+                  <button mat-icon-button aria-label="botao carrinho">
+                    <mat-icon>shopping_cart</mat-icon>
+                  </button>
+                </mat-card-actions>
+              </mat-card>
         </div>
-        <div class="col-md-4">
-            <div class="card" style="width: 18rem;">
-                <img src="https://cdn.discordapp.com/attachments/749132630758522880/763412648774991902/babylonjs_4.gif" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
+        <!--div class="col-md-4">
             <div class="card" style="width: 18rem;">
                 <img src="https://i.imgur.com/znFvkSd.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -34,6 +46,6 @@
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
-        </div>
+        </div-->
     </div>
 </div>

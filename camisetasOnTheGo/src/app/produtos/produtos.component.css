@@ -1,9 +1,61 @@
+small {
+    font-size: 95%;
+    color: black;
+}
+
+em {
+    font-size: 150%;
+    font-style: normal !important;
+    font-family: Roboto, sans-serif !important;
+}
+
+a {
+    color: #3f51b5;
+}
+
+#comprar {
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 130px;
+    opacity: 0;
+    font-style: bold;
+}
+
+a:hover #comprar {
+    text-decoration: none !important;
+    color: unset;
+}
+
 .card-img:hover {
     opacity: 0.5 !important;
 }
 
+.imagem:hover #comprar {
+    opacity: 1 !important;
+    color: black;
+}
+
+.example-card {
+    max-width: 400px;
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
 .zoom {
     overflow: hidden;
+}
+
+.mat-card-title {
+    font-size: 17px !important;
+}
+
+.mat-card-content {
+    font-family: soleil, sans-serif !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
 }
 
 .zoom img {
@@ -13,9 +65,9 @@
     transition: all 0.3s;
 }
 
-.zoom:hover img {
+.zoom:hover img  {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-    opacity: 0.75 !important;
+    opacity: 0.5 !important;
 }

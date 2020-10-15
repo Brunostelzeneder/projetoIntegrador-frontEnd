@@ -5,6 +5,9 @@
 
 .texto {
     font-family: Roboto, sans-serif !important;
+    font-family: soleil, sans-serif !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
     --background-color: #121212;
 }
 
