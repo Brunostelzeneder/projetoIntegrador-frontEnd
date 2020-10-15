@@ -20,8 +20,8 @@
                 <td>{{produto.nome}}</td>
                 
                 <td class="d-flex justify-content-end">
-                    <button class="mr-2" mat-raised-button color="primary" (click)="openDialog(produto)">Editar</button>
-                    <button mat-raised-button color="warn">Excluir</button>
+                    <button class="mr-2" mat-raised-button color="primary" (click)="atualizar(produto.id)">Editar</button>
+                    <button mat-raised-button color="warn" (click)="apagar(produto.id)">Excluir</button>
                 </td>
             </tr>
 

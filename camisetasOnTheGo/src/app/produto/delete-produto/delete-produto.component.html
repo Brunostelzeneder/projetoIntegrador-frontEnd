@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Deseja realmente apagar esse item?</h2>
+<mat-dialog-content class="mat-typography">
+  <p>
+    Nome: {{produto.nome}}
+  </p>
+  <p>    
+    URL de imagem: {{produto.linkImagem}}
+  </p>
+  <p>
+    Instituição: {{produto.instituicao}}
+  </p>
+  <p>
+    Preço: R$ {{produto.preco}}
+  </p>
+  <p>
+    Quantidade: {{produto.quantidade}} disponíveis
+  </p>
+  <p>
+    Maior tamanho: {{produto.tamanho}}
+  </p>
+  <p>
+    Categoria: {{produto.categoria.descricao}}
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close color="warn">Cancelar</button>
+  <button mat-button (click)='apagar(produto.id)' color="primary">Excluir definitivamente</button>
+</mat-dialog-actions>
+
+

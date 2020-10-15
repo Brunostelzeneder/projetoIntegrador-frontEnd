@@ -10,8 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { UpdateCategoriaComponent } from './update-categoria/update-categoria.component';
-import { UpdateProdutoComponent } from './update-produto/update-produto.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
+import { UpdateProdutoComponent } from './produto/update-produto/update-produto.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},

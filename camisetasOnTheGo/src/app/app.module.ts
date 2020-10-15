@@ -10,23 +10,27 @@ import { FooterComponent } from './footer/footer.component';
 import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { AdminComponent } from './admin/admin.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { NgModule } from '@angular/core';
-import { UpdateProdutoComponent } from './update-produto/update-produto.component';
+import { UpdateProdutoComponent } from './produto/update-produto/update-produto.component';
 import { UpdateCategoriaComponent } from './update-categoria/update-categoria.component';
-
 import { DialogComponent } from './dialog/dialog.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { DeleteProdutoComponent } from './produto/delete-produto/delete-produto.component';
+import { ItemAtualComponent } from './produtos/item-atual/item-atual.component';
 
 
 @NgModule({
@@ -45,6 +49,8 @@ import {MatTableModule} from '@angular/material/table';
     UpdateProdutoComponent,
     UpdateCategoriaComponent,
     DialogComponent,
+    DeleteProdutoComponent,
+    ItemAtualComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +64,10 @@ import {MatTableModule} from '@angular/material/table';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
