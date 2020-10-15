@@ -5,14 +5,16 @@
 
 .texto {
     font-family: Roboto, sans-serif !important;
-    font-family: soleil, sans-serif !important;
+
     font-style: normal !important;
-    font-weight: 300 !important;
+    font-weight: 500 !important;
     --background-color: #121212;
+}
+
+button {
+    outline: none !important;
 }
 
 a {
     text-decoration: none !important;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

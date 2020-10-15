@@ -13,7 +13,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
-import { ProdutosComponent } from './produtos/produtos.component';
+import { ProdutosComponent } from './produto/produtos.component';
 import { AdminComponent } from './admin/admin.component';
 import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
 import { NgModule } from '@angular/core';
@@ -22,19 +22,23 @@ import { UpdateCategoriaComponent } from './update-categoria/update-categoria.co
 import { DialogComponent } from './dialog/dialog.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatTableModule } from '@angular/material/table';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
 import { DeleteProdutoComponent } from './produto/delete-produto/delete-produto.component';
-import { ItemAtualComponent } from './produtos/item-atual/item-atual.component';
+import { ItemAtualComponent } from './produto/item-atual/item-atual.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 @NgModule({
-  declarations: [
+  declarations: 
+  [
     AppComponent,
     HomeComponent,
     NavbarComponent,
@@ -52,7 +56,8 @@ import { ItemAtualComponent } from './produtos/item-atual/item-atual.component';
     DeleteProdutoComponent,
     ItemAtualComponent,
   ],
-  imports: [
+  imports: 
+  [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
@@ -67,7 +72,10 @@ import { ItemAtualComponent } from './produtos/item-atual/item-atual.component';
     MatTableModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatDividerModule,
+    MatListModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

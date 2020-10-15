@@ -16,12 +16,14 @@
         </div-->
         <div class="col-md-4 texto" *ngFor="let item of listaProduto">
             <mat-card class="example-card my-3 mx-2 zoom">
-                <a class="imagem" href="#">
+                <a class="imagem" [routerLink]="['/produtos/camiseta', item.id]">
                     <img mat-card-image class="" src="{{item.linkImagem}}" alt="Photo of a Shiba Inu">
-                    <p id="comprar"><b>COMPRAR</b></p>
+                    <p id="comprar">
+                        <mat-icon>shopping_cart</mat-icon>
+                    </p>
                 </a>
-                <mat-card-title class="text-center mb-1 mt-2">{{item.nome}}</mat-card-title>
-                <mat-card-content class="mb-1" align="end">
+                <mat-card-title class="mb-1 mt-2" align="center">{{item.nome}}</mat-card-title>
+                <mat-card-content class="mb-1" align="center">
                   
                     
                         <small>R$ </small>   <em> {{item.preco}}</em> 
@@ -29,10 +31,7 @@
                   
                 </mat-card-content>
                 
-                <mat-card-actions class="pt-0" align="end">
-                  <button mat-icon-button aria-label="botao carrinho">
-                    <mat-icon>shopping_cart</mat-icon>
-                  </button>
+                <mat-card-actions class="pt-0" align="center">
                 </mat-card-actions>
               </mat-card>
         </div>
