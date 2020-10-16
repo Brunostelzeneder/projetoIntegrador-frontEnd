@@ -11,6 +11,7 @@ import { ProdutoService } from 'src/app/service/produto.service';
 export class ItemAtualComponent implements OnInit {
 
   produto: Produto = new Produto();
+  quantidade: number = 1;
 
   constructor(
     private router: Router,
@@ -29,6 +30,14 @@ export class ItemAtualComponent implements OnInit {
     this.produtoService.getByIdProduto(id).subscribe( (resp: Produto) => {
       this.produto = resp;
     });
+  }
+
+  quantidadeMais() {
+    this.quantidade += 1;
+  }
+
+  quantidadeMenos() {
+    this.quantidade -= 1;
   }
 
 }

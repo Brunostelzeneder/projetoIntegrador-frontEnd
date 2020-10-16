@@ -3,8 +3,26 @@
     
 }
 
+#comprar {
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    padding: 1em 6em;
+}
+
+#carrinho {
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    padding: 1em 3em;
+}
+
 .titulo{
     border-bottom: 2px #000000 solid;
+}
+
+.example-full-width {
+    width: 20px;
 }
 
 #preco {

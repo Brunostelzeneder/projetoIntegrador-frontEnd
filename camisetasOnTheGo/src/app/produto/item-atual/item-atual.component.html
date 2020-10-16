@@ -10,25 +10,46 @@
                     <p class="display-4 text-right">R$ {{produto.preco}}</p>
                 </h2>
                 <mat-divider></mat-divider>
-                <div class="row d-flex justify-content-end mt-4  align-itens-center">
+                <div class="row d-flex justify-content-end my-4  align-itens-center">
                     <div class="col-md-6">
                         <p style="vertical-align: middle;">Tamanho: </p>
                     </div>
                     <div class="col-md-6 d-flex justify-content-end">
                         <mat-button-toggle-group #group="matButtonToggleGroup" >
                             <mat-button-toggle value="P" aria-label="Text align left">
-                                P
+                                &nbsp;P&nbsp;
                             </mat-button-toggle>
                             <mat-button-toggle value="M" aria-label="Text align center">
-                                M
+                                &nbsp;M&nbsp;
                             </mat-button-toggle>
                             <mat-button-toggle value="G" aria-label="Text align right">
-                                G
+                                &nbsp;G&nbsp;
                             </mat-button-toggle>
                             <mat-button-toggle value="GG" aria-label="Text align justify">
                                 GG
                             </mat-button-toggle>
                         </mat-button-toggle-group>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-end my-4 align-itens-center">
+                    <div class="col-md-6">
+                        <p style="vertical-align: middle;">Quantidade: </p>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <button mat-button>+</button>
+                        <mat-form-field class="example-full-width">
+                            <input matInput [(ngModel)]='quantidade'>
+                        </mat-form-field>
+                        <button mat-button>–</button>
+                    </div>
+                </div>
+                <mat-divider></mat-divider>
+                <div class="row pt-5">
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <button id="comprar">COMPRAR</button>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <button id="carrinho">ADICIONAR AO CARRINHO</button>
                     </div>
                 </div>
             </mat-list>

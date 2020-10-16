@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'update-categoria', component: UpdateCategoriaComponent},
   {path: 'update-produto', component: UpdateProdutoComponent},
   {path: 'sobrenos', component: SobrenosComponent},
-  {path: 'produtos/camiseta/:id', component: ItemAtualComponent},
+  {path: 'produtos/item/:id', component: ItemAtualComponent},
   {path: 'editar-categoria/:id', component: UpdateCategoriaComponent}
 ];
 

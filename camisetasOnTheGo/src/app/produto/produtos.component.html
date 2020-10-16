@@ -17,7 +17,7 @@
             </div-->
             <div class="col-md-4 texto" *ngFor="let item of listaProduto">
                 <mat-card class="example-card my-3 mx-2 zoom">
-                    <a class="imagem" [routerLink]="['/produtos/camiseta', item.id]">
+                    <a class="imagem" [routerLink]="['/produtos/item', item.id]">
                         <img mat-card-image class="" src="{{item.linkImagem}}" alt="Photo of a Shiba Inu">
                         <p id="comprar">
                             <mat-icon>shopping_cart</mat-icon>

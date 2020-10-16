@@ -36,8 +36,8 @@ export class DeleteCategoriaComponent implements OnInit {
   }
   
   apagar(id: number) {
-    this.produtoService.deleteByIdProduto(id).subscribe((resp: Produto) => {
-      this.produto = resp;
+    this.categoriaService.deleteByIdCategoria(id).subscribe((resp: Categoria) => {
+      this.categoria = resp;
     });
     this.dialogRef.close();    
     this.router.navigate(['/admin']);
