@@ -7,12 +7,12 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
+import { PostCategoriaComponent } from './categoria/post-categoria/post-categoria.component';
 import { ProdutosComponent } from './produto/produtos.component';
-import { UpdateCategoriaComponent } from './update-categoria/update-categoria.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { UpdateProdutoComponent } from './produto/update-produto/update-produto.component';
 import { ItemAtualComponent } from './produto/item-atual/item-atual.component';
+import { UpdateCategoriaComponent } from './categoria/update-categoria/update-categoria.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -28,7 +28,8 @@ const routes: Routes = [
   {path: 'update-categoria', component: UpdateCategoriaComponent},
   {path: 'update-produto', component: UpdateProdutoComponent},
   {path: 'sobrenos', component: SobrenosComponent},
-  {path: 'produtos/camiseta/:id', component: ItemAtualComponent}
+  {path: 'produtos/camiseta/:id', component: ItemAtualComponent},
+  {path: 'editar-categoria/:id', component: UpdateCategoriaComponent}
 ];
 
 @NgModule({

@@ -4,10 +4,10 @@
 }
 
 .titulo{
-    border-bottom: 4px #ff4081 solid;
+    border-bottom: 2px #000000 solid;
 }
 
 #preco {
     font-size: 2.2rem !important;
-    color: #ff4081;
+    color: #000000;
 }
