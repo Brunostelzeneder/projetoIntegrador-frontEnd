@@ -25,7 +25,7 @@ export class DialogComponent implements OnInit {
   categoria: Categoria = new Categoria();
   listaCategoria: Categoria[];
 
-  produtoForm: FormGroup;
+  //produtoForm: FormGroup;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogData,

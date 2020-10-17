@@ -1,0 +1,64 @@
+<div class="container texto">
+  <div class="row my-5 py-5">
+    <div class="col-md-12">
+      <h3 class="text-center mb-4 ">Cadastro de uma nova categoria</h3>
+
+      <!--div class="form-group">
+        <label class="" for="texto">Nome do categoria:</label>
+        <input class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu novo categoria"
+          [(ngModel)]="categoria.descricao">
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-12 d-flex justify-content-center">
+          <button class="btn btn-outline-success w-25" >Cadastrar</button>
+        </div>
+      </div-->
+
+      <div class="parent mb-5">
+        <form class="example-form pb-2">
+          <mat-form-field class="example-full-width">
+            <mat-label>Nome da nova categoria</mat-label>
+            <input matInput #message placeholder="Ex. Meias" [(ngModel)]="categoria.descricao" name="Descrição">
+            <mat-hint align="end">{{message.value.length}} / 100</mat-hint>
+          </mat-form-field>
+
+        </form>
+        <button mat-raised-button color="primary" (click)='cadastrar()'>Cadastrar</button>
+      </div>
+
+      <hr>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h4 class="text-center ">Lista de categorias</h4>
+        </div>
+      </div>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Descrição</th>
+            <th scope="col" class="d-flex justify-content-end">Modificações</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor='let item of listaCategoria'>
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.descricao}}</td>
+            <td class="d-flex justify-content-end">
+              <button mat-raised-button color="primary" class="mr-2"
+              (click)="atualizar(item.id)">Editar</button>
+              <button mat-raised-button color="warn" 
+              (click)="apagar(item.id)">Apagar</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+</div>
