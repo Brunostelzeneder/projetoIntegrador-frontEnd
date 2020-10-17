@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { Categoria } from '../model/Categoria';
-import { CategoriaService } from '../service/categoria.service';
+import { Categoria } from 'src/app/model/Categoria';
+import { CategoriaService } from 'src/app/service/categoria.service';
+import { DeleteCategoriaComponent } from '../delete-categoria/delete-categoria.component';
+import { UpdateCategoriaComponent } from '../update-categoria/update-categoria.component';
+
 
 @Component({
   selector: 'app-post-categoria',
@@ -15,7 +19,9 @@ export class PostCategoriaComponent implements OnInit {
   
   constructor(
     private categoriaService: CategoriaService,
-    private router: Router
+    private router: Router,
+    private updateDialog: MatDialog,
+    private deleteDialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -45,4 +51,19 @@ export class PostCategoriaComponent implements OnInit {
       })
   }
 
+  atualizar(id: number): void {
+    const dialogRef = this.updateDialog.open(
+      UpdateCategoriaComponent, {
+        data: {id: id}
+      });
+
+    dialogRef.afterClosed().subscribe(resp => {});
+  }
+
+  apagar(id: number): void {
+    const dialogRef = this.deleteDialog.open(
+      DeleteCategoriaComponent, { 
+        data: {id: id} 
+      });
+  }
 }

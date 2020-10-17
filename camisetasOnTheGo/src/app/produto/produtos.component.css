@@ -3,6 +3,10 @@ small {
     color: black;
 }
 
+main {
+    background-color: #fffcfc;
+}
+
 em {
     font-size: 150%;
     font-style: normal !important;
@@ -20,6 +24,12 @@ a {
     opacity: 0;
     font-style: bold;
 }
+
+#pagprodutos {
+    background-color: #fffcfc;
+}
+
+/*.mat-card:not([class*=mat-elevation-z]) {}*/
 
 a:hover #comprar {
     text-decoration: none !important;
@@ -48,8 +58,14 @@ a:hover #comprar {
     overflow: hidden;
 }
 
+.mat-card:hover {
+    -webkit-box-shadow: 6px 6px 10px #999; 
+	   -moz-box-shadow: 6px 6px 10px #999;
+	        box-shadow: 6px 6px 10px #999;
+}
+
 .mat-card-title {
-    font-size: 17px !important;
+    font-size: 20px !important;
 }
 
 .mat-card-content {
