@@ -1,3 +1,48 @@
 a {
     cursor: pointer;
+}a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(24, 24, 24);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+.nav-link {
+    color: black !important;
+    font-size: 2.1vh;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2px;
+}
+
+.navbar-brand {
+    margin-right: 6rem !important;
+}
+
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+
+.navbar.center .navbar-inner .nav {
+    display:inline-block;
+    float: none;
 }

@@ -3,6 +3,10 @@
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+* {
+    letter-spacing: 0.25px !important;
+}
+
 .texto {
     font-family: Roboto, sans-serif !important;
 

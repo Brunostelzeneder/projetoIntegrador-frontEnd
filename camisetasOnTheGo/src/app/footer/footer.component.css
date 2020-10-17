@@ -1,0 +1,42 @@
+#footer-defi{
+    background-color: black !important;
+}
+
+.color-primary{
+    color: white !important;
+    text-decoration-color: white !important;
+}
+
+.foot-sub{
+    letter-spacing:1px !important;
+    color:#C4C4C4 !important;
+}
+
+#foot-news{
+    margin-left:3rem;
+    margin-top:1rem !important;
+}
+
+#foot-title{
+    letter-spacing:1px;
+    margin-bottom:-1rem;
+}
+
+#footer-zap{
+    filter: invert();
+}
+
+
+#email12{
+    margin-top:1rem !important;
+    width:3rem !important;
+}
+
+.form-control{
+    margin-top:1rem !important;
+    letter-spacing:1px !important;
+}
+
+#foot-copy{
+    letter-spacing:1px; 
+}
