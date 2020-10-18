@@ -1,0 +1,33 @@
+<div class="container py-5 my-5 texto" style="overflow-x: auto !important;">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h4 class="text-center texto">Lista de produtos</h4>
+        </div>
+    </div>
+
+    <table class="table mt-2 table-hover font-weight-regular">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descrição</th>
+                
+                <th scope="col" class="d-flex justify-content-end">Modificações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let produto of listaProduto'>
+                <th scope="row">{{produto.id}}</th>
+                <td>{{produto.nome}}</td>
+                
+                <td class="d-flex justify-content-end">
+                    <button class="mr-2" mat-raised-button color="primary" (click)="atualizar(produto.id)">Editar</button>
+                    <button mat-raised-button color="warn" (click)="apagar(produto.id)">Excluir</button>
+                </td>
+            </tr>
+
+        </tbody>
+
+
+
+    </table>
+</div>

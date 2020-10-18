@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
+    letter-spacing: 0.25px !important;
+}
+
+.texto {
+    font-family: Roboto, sans-serif !important;
+
+    font-style: normal !important;
+    font-weight: 500 !important;
+    --background-color: #121212;
+}
+
+button {
+    outline: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}

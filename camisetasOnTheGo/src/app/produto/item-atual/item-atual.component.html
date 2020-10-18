@@ -1,0 +1,82 @@
+<main>
+    <div class="container py-5 my-3">
+        <small> <a routerLink='/home'>Home</a> / <a routerLink='/produtos'>Produtos</a> / {{produto.nome}}</small>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{produto.linkImagem}}" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-md-6">
+                <h2 class="display-4 text-center pb-2 mt-5 titulo">Camiseta {{produto.nome}}</h2>
+                <mat-list>
+                    <div class="row d-flex justify-content-end my-4  align-itens-center">
+                        <div class="col-md-6">
+                            <p style="vertical-align: middle;">Tamanho: </p>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-end">
+                            <mat-button-toggle-group #group="matButtonToggleGroup">
+                                <mat-button-toggle value="P" aria-label="Text align left">
+                                    &nbsp;P&nbsp;
+                                </mat-button-toggle>
+                                <mat-button-toggle value="M" aria-label="Text align center">
+                                    &nbsp;M&nbsp;
+                                </mat-button-toggle>
+                                <mat-button-toggle value="G" aria-label="Text align right">
+                                    &nbsp;G&nbsp;
+                                </mat-button-toggle>
+                                <mat-button-toggle value="GG" aria-label="Text align justify">
+                                    GG
+                                </mat-button-toggle>
+                            </mat-button-toggle-group>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-end my-4 align-itens-center">
+                        <div class="col-md-6">
+                            <p style="vertical-align: middle;">Quantidade: </p>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-end">
+                            <button mat-button>+</button>
+                            <mat-form-field class="example-full-width">
+                                <input matInput [(ngModel)]='quantidade'>
+                            </mat-form-field>
+                            <button mat-button>–</button>
+                        </div>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="pt-2">
+                        <h2 id="preco" class="lead text-right">
+                            <p class="display-4 text-right">R$ {{produto.preco}}</p>
+                        </h2>
+                    </div>
+
+                    <div class="row pt-5">
+                        <div class="col-md-6 col-sm-6 col-xs-6"> 
+                            <a href="#" class="btn btn-sm animated-button victoria-three">COMPRAR</a> </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6"> 
+                            <a href="#" class="btn btn-sm animated-button victoria-three">ADICIONAR AO CARRINHO</a> 
+                        </div>
+                    </div>
+
+                </mat-list>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-12 py-2">
+                <h4 class="display-4 text-center">Sobre o produto</h4>
+                <p class="text-secondary"
+                    style="padding-left: 20px; padding-right: 20px; padding-top: 2rem; font-size: 18px;">
+                    Todas as nossas camisetas são feitas 100% de algodão, fio 30 penteado. As estampas são feitas
+                    através do processo de estampagem serigrafia, também conhecido como silk-screen. Todas as estampas
+                    possuem o mesmo tamanho, independente do tamanho da camiseta.
+
+                    Nossas estampas são feitas com tintas especiais à base de água, mantendo uma ótima qualidade por um
+                    longo período, mantendo as cores vivas.
+
+                    Para uma maior durabilidade do produto, indicamos lavagem a mão, conservando o tecido e a
+                    estampagem, não usar alvejante, pois pode desbotar ou manchar a estampa da camiseta. Já em lavagem
+                    na máquina, recomendamos o ciclo de lavagem leve, não utilizar secadora, também recomendamos secar
+                    no varal, para uma maior conservação do produto.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
