@@ -17,6 +17,10 @@ a {
     color: #3f51b5;
 }
 
+.example-form-field {
+    width: 400px;
+}
+
 #comprar {
     position: absolute;
     margin-top: -200px;

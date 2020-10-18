@@ -37,6 +37,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { PoliticaPrivacidadeComponent } from './footer/politicaprivacidade/politicaprivacidade.component';
 
 
 
@@ -60,6 +62,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     DeleteProdutoComponent,
     ItemAtualComponent,
     DeleteCategoriaComponent,
+    PoliticaPrivacidadeComponent
   ],
   imports: 
   [
@@ -80,7 +83,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatIconModule,
     MatDividerModule,
     MatListModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

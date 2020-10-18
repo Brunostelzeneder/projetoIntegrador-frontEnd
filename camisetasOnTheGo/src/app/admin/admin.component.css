@@ -2,3 +2,17 @@
     font-style: normal;
     font-weight: bold;
 }
+
+.mat-raised-button.mat-primary {
+    background-color: green;
+}
+
+.mat-form-field {
+    min-width: 230px;
+    max-width: 730px;
+    width: 100%;
+}
+
+.example-container {
+    width: 100%;
+}

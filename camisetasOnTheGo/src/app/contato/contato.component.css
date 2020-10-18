@@ -1,0 +1,26 @@
+.example-container{
+    min-width: 330px;
+    max-width: 540px;
+    width: 100%;
+}
+
+.mat-raised-button.mat-primary {
+    background-color: green;
+}
+
+.mat-form-field {
+    min-width: 330px;
+    max-width: 540px;
+    width: 100%;
+}
+
+.display-4 {
+    font-size: 6vh;
+}
+
+main {
+    background-image: url(../../assets/img/tshirts.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 60vh;
+}
