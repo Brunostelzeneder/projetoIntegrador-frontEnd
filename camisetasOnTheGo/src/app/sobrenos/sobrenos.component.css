@@ -18,6 +18,11 @@
     color: #555;
   }
 
+
+  .fontemonte {
+    font-family: "Montserrat", sans-serif
+  }
+
   .img{
     width: 8em;
     height: 8em;
@@ -27,3 +32,4 @@
 .img:hover{
 transform: scale(1.05);
 }
+
