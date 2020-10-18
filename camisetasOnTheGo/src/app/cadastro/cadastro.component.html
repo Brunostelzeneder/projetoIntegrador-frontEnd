@@ -2,13 +2,13 @@
     <div class="container rounded-lg">
         <div class="row py-5">
             <div class="col-md-12">
-                <h1 class="text-center">Cadastrar</h1>
+                <h1 class="text-center texto">Cadastrar</h1>
             </div>
         </div>
         <div class="row pb-5 d-flex justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div>
-                    <div class="form-group">
+                    <!--div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome aqui"
                             [(ngModel)]='user.nome'>
@@ -34,6 +34,43 @@
 
                     <div class="d-flex justify-content-center">
                         <button class="btn btn-outline-success w-25" (click)='cadastrar()'>Cadastrar</button>
+                    </div-->
+                    <div class="example-container">
+                        <mat-form-field class="pb-3" appearance="fill">
+                            <mat-label>Nome</mat-label>
+                            <input matInput placeholder="Fulanx da Silva" [(ngModel)]='user.nome'>
+                        </mat-form-field>
+                        <mat-form-field class="pb-3" appearance="fill">
+                            <mat-label>E-mail</mat-label>
+                            <input matInput placeholder="pat@example.com" [(ngModel)]='user.email' [formControl]="email"
+                                required>
+                            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="pb-3" appearance="fill">
+                            <mat-label>Senha</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" id="senha"
+                                (input)='conferirSenha($event)' value='{{senha}}'>
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="pb-3" appearance="fill">
+                            <mat-label>Confirmação de Senha</mat-label>
+                            <input matInput [(ngModel)]='user.senha' [type]="hide ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                        <br>
+                        <div class="d-flex justify-content-center">
+                            <button class="text-center" mat-raised-button color="primary" (click)='cadastrar()'>
+                                Entrar
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

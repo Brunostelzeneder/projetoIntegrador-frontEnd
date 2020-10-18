@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
@@ -12,7 +13,9 @@ export class CadastroComponent implements OnInit {
 
   user: User = new User();
   senha: string;
-
+  hide: boolean = true;
+  email = new FormControl('', [Validators.required, Validators.email]);
+  
   constructor(
     private authService: AuthService,
     private router: Router
@@ -36,6 +39,15 @@ export class CadastroComponent implements OnInit {
 
   conferirSenha(event: any) {
     this.senha = event.target.value
+  }
+
+
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'Insira um e-mail válido';
+    }
+
+    return this.email.hasError('email') ? 'E-mail inválido' : '';
   }
 
 }

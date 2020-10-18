@@ -11,6 +11,8 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class ProdutosComponent implements OnInit {
 
+  nome: string;
+
   produto: Produto = new Produto();
   listaProduto: Produto[];
 
@@ -36,6 +38,19 @@ export class ProdutosComponent implements OnInit {
     this.produtoService.getAllProduto().subscribe((resp: Produto[]) => {
       this.listaProduto = resp; 
     });
+  }
+
+  pesquisar(nome: string){
+    this.findByNomeProduto(nome);
+  }
+
+  findByNomeProduto(nome: string) {
+    if(nome.length == 0 || nome == undefined)
+      this.findAllProduto();
+    else
+      this.produtoService.getByNomeProduto(nome).subscribe((resp: Produto[]) => {
+        this.listaProduto	= resp;
+      });
   }
 
   findAllCategoria() {

@@ -5,6 +5,11 @@ import { Categoria } from '../model/Categoria';
 import { ProdutoService } from '../service/produto.service';
 import { CategoriaService } from '../service/categoria.service';
 import { Router } from '@angular/router';
+import { FormControl } from '@angular/forms';
+
+interface Tamanho {
+  value: string;
+}
 
 @Component({
   selector: 'app-admin',
@@ -12,6 +17,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+
+  produtoControl = new FormControl('primary');
+
+  tamanhos: Tamanho[] = [
+    {value: 'PP'},
+    {value: 'P'},
+    {value: 'M'},
+    {value: 'G'},
+    {value: 'GG'},
+    {value: 'XG'}
+  ];
 
   produto: Produto = new Produto()
   listaProduto: Produto[];

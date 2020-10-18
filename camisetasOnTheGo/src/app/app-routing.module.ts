@@ -13,6 +13,7 @@ import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { UpdateProdutoComponent } from './produto/update-produto/update-produto.component';
 import { ItemAtualComponent } from './produto/item-atual/item-atual.component';
 import { UpdateCategoriaComponent } from './categoria/update-categoria/update-categoria.component';
+import { PoliticaPrivacidadeComponent } from './footer/politicaprivacidade/politicaprivacidade.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: 'update-produto', component: UpdateProdutoComponent},
   {path: 'sobrenos', component: SobrenosComponent},
   {path: 'produtos/item/:id', component: ItemAtualComponent},
-  {path: 'editar-categoria/:id', component: UpdateCategoriaComponent}
+  {path: 'editar-categoria/:id', component: UpdateCategoriaComponent},
+  {path: 'politicaprivacidade', component: PoliticaPrivacidadeComponent}
 ];
 
 @NgModule({
