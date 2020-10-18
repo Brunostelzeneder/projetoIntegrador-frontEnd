@@ -12,14 +12,6 @@ import { FooterComponent } from './footer/footer.component';
 import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-<<<<<<< HEAD
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { ProdutosComponent } from './produtos/produtos.component';
-import { AdminComponent } from './admin/admin.component';
-import { PostCategoriaComponent } from './post-categoria/post-categoria.component';
-import { NgModule } from '@angular/core';
-=======
 import { UpdateProdutoComponent } from './produto/update-produto/update-produto.component';
 import { DeleteCategoriaComponent } from './categoria/delete-categoria/delete-categoria.component';
 import { UpdateCategoriaComponent } from './categoria/update-categoria/update-categoria.component';
@@ -47,7 +39,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 
->>>>>>> ae06f6123ec59add9dabd2400965bfcfad9bd1c2
 
 @NgModule({
   declarations: 
@@ -59,11 +50,6 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     ContatoComponent,
     LoginComponent,
     CadastroComponent,
-<<<<<<< HEAD
-    ProdutosComponent,
-    AdminComponent,
-    PostCategoriaComponent
-=======
     MenuLateralComponent,
     ProdutosComponent,
     AdminComponent,
@@ -74,7 +60,6 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     DeleteProdutoComponent,
     ItemAtualComponent,
     DeleteCategoriaComponent,
->>>>>>> ae06f6123ec59add9dabd2400965bfcfad9bd1c2
   ],
   imports: 
   [
