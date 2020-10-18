@@ -1,5 +1,17 @@
 <main>
     <div class="container py-5 my-5" id="pagprodutos">
+        <div class="d-flex justify-content-end">
+
+            <mat-form-field class="example-form-field">
+                <mat-label class="text-right">Pesquisar produto</mat-label>
+                <input matInput type="text" [(ngModel)]="nome">
+                <button mat-button matSuffix mat-icon-button (click)="pesquisar(nome)">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </mat-form-field>
+            <br>
+        </div>
+
         <small> <a routerLink='/home'>Home</a> / Produtos</small>
         <div class="row">
             <!--div class="col-md-4" *ngFor="let item of listaProduto">
@@ -15,7 +27,7 @@
                 </div>
                 
             </div-->
-            <div class="col-md-4 texto" *ngFor="let item of listaProduto">
+            <div class="col-md-4 texto" *ngFor="let item of listaProduto | orderBy : key : reverse">
                 <mat-card class="example-card my-3 mx-2 zoom">
                     <a class="imagem" [routerLink]="['/produtos/item', item.id]">
                         <img mat-card-image class="" src="{{item.linkImagem}}" alt="Photo of a Shiba Inu">
@@ -23,18 +35,15 @@
                             <mat-icon>shopping_cart</mat-icon>
                         </p>
                     </a>
-                    <mat-card-title class="mb-1 mt-2" align="center">{{item.nome}}</mat-card-title>
+                    <mat-card-title class="mb-1 mt-2" style="min-height: 60px;" align="center">{{item.nome}}
+                    </mat-card-title>
                     <mat-card-content class="mb-1" align="center">
-                      
-                        
-                            <small>R$ </small>   <em> {{item.preco}}</em> 
-                        
-                      
+                        <small>R$ </small> <em> {{item.preco}}</em>
                     </mat-card-content>
-                    
+
                     <mat-card-actions class="pt-0" align="center">
                     </mat-card-actions>
-                  </mat-card>
+                </mat-card>
             </div>
             <!--div class="col-md-4">
                 <div class="card" style="width: 18rem;">

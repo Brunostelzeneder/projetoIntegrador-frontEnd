@@ -1,61 +1,66 @@
-<div class="container py-5 my-5">
+<div class="container py-5 mb-5">
     <h3 class="text-center texto">Cadastre um novo produto 🤑</h3>
     <h4 class="text-center mb-4 texto">(✍ ou <a routerLink="/update-produto">modifique um existente</a>)</h4>
 
     <div class="row d-flex justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-4 pt-5">
             <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGIFlu09jQcSQ/profile-displayphoto-shrink_800_800/0?e=1607558400&v=beta&t=aBX6K3Xac_7awldrYc2XDeEtmwvlqkkDtgS5padprZo"
                 class="img-fluid rounded-circle" alt="Responsive image">
         </div>
-        <div class="col-md-8">
-            <div class="form-group">
-                <label class="texto" for="titulo">Nome do produto:</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite aqui o seu titulo"
-                    [(ngModel)]='produto.nome'>
-            </div>
+        <div class="col-md-8 pt-5">
 
-            <div class="form-group">
-                <label class="texto" for="titulo">Link da imagem:</label>
-                <input type="text" class="form-control" id="linkImagem" placeholder="Digite aqui o seu titulo"
-                    [(ngModel)]='produto.linkImagem'>
-            </div>
-
-            <div class="form-group">
-                <label class="texto" for="titulo">Instituição ou causa:</label>
-                <input type="text" class="form-control" id="instituicao" placeholder="Digite aqui o seu titulo"
-                    [(ngModel)]='produto.instituicao'>
-            </div>
-            <div class="form-group">
-                <label class="texto" for="titulo">Preço:</label>
-                <input type="text" class="form-control" id="preco" placeholder="Digite aqui o seu titulo"
-                    [(ngModel)]='produto.preco'>
-            </div>
-            <div class="form-group">
-                <label class="texto" for="titulo">Quantidade:</label>
-                <input type="text" class="form-control" id="quantidade" placeholder="Digite aqui o seu titulo"
-                    [(ngModel)]='produto.quantidade'>
-            </div>
-            <div class="form-group">
-                <label class="texto" for="titulo">Tamanho:</label>
-                <input type="text" class="form-control" id="tamanho" placeholder="Digite aqui o seu titulo"
-                    [(ngModel)]='produto.tamanho'>
-            </div>
-            <div class="form-group">
-                <label class="texto" for="categoria">Categoria: (ou <a routerLink='/post-categoria'>crie uma aqui</a>)</label>
-                <select name="categoria" id='categoria' class="form-control" [(ngModel)]='idCategoria'
-                    (change)='findByIdCategoria()'>
-                    <option *ngFor='let item of listaCategoria' value={{item.id}}>
-                        {{item.descricao}}
-                    </option>
-                </select>
-            </div>
-
-            <div class="row d-flex align-items-end">
-
-                <div class="col-md-6 d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-success w-25 texto" (click)='publicar()'>Publicar</button>
+            <div class="example-container texto px-5">
+                <mat-form-field>
+                    <mat-label>Nome do produto</mat-label>
+                    <input matInput placeholder="Ex: Camiseta greenpeace" [(ngModel)]="produto.nome">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Link da imagem</mat-label>
+                    <input matInput placeholder="i.imgur.com/imagem.png" [(ngModel)]="produto.linkImagem">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Instituição ou causa</mat-label>
+                    <input matInput [(ngModel)]="produto.instituicao">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Preço</mat-label>
+                    <input matInput [(ngModel)]="produto.preco">
+                    <span matPrefix>R$&nbsp;</span>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Quantidade</mat-label>
+                    <input matInput type="number" [(ngModel)]="produto.quantidade">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Tamanho</mat-label>
+                    <select matNativeControl [(ngModel)]="produto.tamanho" name="tamanho">
+                        <option value="PP">PP</option>
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                        <option value="XG">XG</option>
+                    </select>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label for="categoria">Categoria</mat-label>
+                    <select matNativeControl class="text-right" [(ngModel)]='idCategoria' name="car" >
+                        <option *ngFor='let item of listaCategoria' value={{item.id}}>
+                            {{item.descricao}}
+                        </option>
+                    </select>
+                </mat-form-field>
+                <p class="pt-1">Não encontrou a categoria que gostaria? <a routerLink='/post-categoria'>Crie uma aqui</a></p>
+                <div class="d-flex justify-content-center">
+                    
+                    <button class="text-center" mat-raised-button color="primary" (click)='publicar()'>Cadastrar</button>
                 </div>
-
             </div>
         </div>
     </div>

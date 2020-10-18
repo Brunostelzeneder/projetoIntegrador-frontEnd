@@ -1,0 +1,20 @@
+.example-container{
+    min-width: 330px;
+    max-width: 540px;
+    width: 100%;
+}
+
+.mat-raised-button.mat-primary {
+    background-color: green;
+    padding: 0 4em;
+}
+
+.mat-form-field {
+    min-width: 330px;
+    max-width: 540px;
+    width: 100%;
+}
+
+main {
+    min-height: 50vh;
+}
