@@ -1,6 +1,6 @@
 .social-link {
-    width: 30px;
-    height: 30px;
+    width: 52px;
+    height: 52px;
     border: 1px solid #ddd;
     display: flex;
     align-items: center;
@@ -33,3 +33,8 @@
 transform: scale(1.05);
 }
 
+
+
+ul li {
+  display: inline-block;
+}
