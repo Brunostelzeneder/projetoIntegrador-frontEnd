@@ -17,6 +17,11 @@ a {
     color: #3f51b5;
 }
 
+p a {
+    color: #3f51b5;
+    cursor: pointer;
+}
+
 .example-form-field {
     width: 400px;
 }

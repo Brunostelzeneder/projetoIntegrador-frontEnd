@@ -13,6 +13,7 @@
         </div>
 
         <small> <a routerLink='/home'>Home</a> / Produtos</small>
+        <p class="text-right">Ordenar por: <a (click)='trocar()'>Data {{seta}}</a></p>
         <div class="row">
             <!--div class="col-md-4" *ngFor="let item of listaProduto">
                 <div class="pb-5">
@@ -27,6 +28,7 @@
                 </div>
                 
             </div-->
+            
             <div class="col-md-4 texto" *ngFor="let item of listaProduto | orderBy : key : reverse">
                 <mat-card class="example-card my-3 mx-2 zoom">
                     <a class="imagem" [routerLink]="['/produtos/item', item.id]">

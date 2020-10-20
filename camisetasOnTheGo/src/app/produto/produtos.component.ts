@@ -21,6 +21,7 @@ export class ProdutosComponent implements OnInit {
 
   key = 'data'
   reverse = true
+  seta: string = '↓';
 
   constructor(
     private produtoService: ProdutoService,
@@ -32,6 +33,14 @@ export class ProdutosComponent implements OnInit {
 
     this.findAllProduto();
     this.findAllCategoria();
+  }
+
+  trocar(){
+    this.reverse = !this.reverse;
+    if(this.seta == '↓')
+      this.seta = '↑';
+    else
+      this.seta = '↓';
   }
 
   findAllProduto() {
